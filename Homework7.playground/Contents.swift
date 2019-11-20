@@ -14,10 +14,11 @@ import PlaygroundSupport
 // A string for the URL for an image for the book cover
 //
 struct Book: Codable {
+    let id: Int?
     let title: String
     let author: String
-    let publishedDate: String
-    let imageURL: String
+    let published: String
+    let imageURLString: String
 }
 // Remember that this structure needs to conform to the `Encodable` protocol.
 // Using `Codable` more generally will be useful, as by doing this you'll
@@ -30,11 +31,11 @@ struct Book: Codable {
 // have an amusing dataset to work with, each student is requested to
 // create five different books for this database.
 var books: [Book] = []
-let book1 = Book(title: "Ranger's Apprentice The Ruins of Gorlan", author: "John Flanagan", publishedDate: "June 8, 2006", imageURL: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1293952830l/60400.jpg")
-let book2 = Book(title: "The Roar", author: "Emma Clayton", publishedDate: "January 1, 2008", imageURL: "https://upload.wikimedia.org/wikipedia/en/d/dc/The_Roar_Emma_Clayton.jpg")
-let book3 = Book(title: "The Whisper", author: "Emma Clayton", publishedDate: "Feburary 1, 2012", imageURL: "https://upload.wikimedia.org/wikipedia/en/c/c7/The_Whisper_Book_Cover.jpg")
-let book4 = Book(title: "Jedi Under Siege", author: "Kevin J. Anderson", publishedDate: "June 1, 1998 ", imageURL: "https://images-na.ssl-images-amazon.com/images/I/717QSWKME2L._SX288_BO1,204,203,200_.gif")
-let book5 = Book(title: "Star Wars Episode 2: Attack of the Clones", author: "R.A. Salvatore", publishedDate: "April 23, 2002", imageURL: "https://upload.wikimedia.org/wikipedia/en/5/5d/Attackoftheclones_novel.jpg")
+let book1 = Book(id: nil, title: "Ranger's Apprentice The Ruins of Gorlan", author: "John Flanagan", published: "June 8, 2006", imageURLString: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1293952830l/60400.jpg")
+let book2 = Book(id: nil, title: "The Roar", author: "Emma Clayton", published: "January 1, 2008", imageURLString: "https://upload.wikimedia.org/wikipedia/en/d/dc/The_Roar_Emma_Clayton.jpg")
+let book3 = Book(id: nil, title: "The Whisper", author: "Emma Clayton", published: "Feburary 1, 2012", imageURLString: "https://upload.wikimedia.org/wikipedia/en/c/c7/The_Whisper_Book_Cover.jpg")
+let book4 = Book(id: nil, title: "Jedi Under Siege", author: "Kevin J. Anderson", published: "June 1, 1998 ", imageURLString: "https://images-na.ssl-images-amazon.com/images/I/717QSWKME2L._SX288_BO1,204,203,200_.gif")
+let book5 = Book(id: nil, title: "Star Wars Episode 2: Attack of the Clones", author: "R.A. Salvatore", published: "April 23, 2002", imageURLString: "https://upload.wikimedia.org/wikipedia/en/5/5d/Attackoftheclones_novel.jpg")
 
 
 books.append(book1)
